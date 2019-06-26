@@ -2,6 +2,7 @@ function Thermostat() {
 
   const DEFAULTTEMP = 20;
   const MINTEMP = 10;
+  const MAXTEMPONPOWERSAVING= 25;
 
   this.defaultTemperature = function() {
       return DEFAULTTEMP;
@@ -10,7 +11,11 @@ function Thermostat() {
   this.temp = DEFAULTTEMP
 
   this.up = function(){
-    this.temp ++
+  // if temp > 25  and power switch is on then we can't have it higher
+    if (this.temp < MAXTEMPONPOWERSAVING) {
+
+      this.temp ++;
+    }
     return this.temp
   };
 
@@ -24,6 +29,10 @@ function Thermostat() {
 
   this.minTemp = function() {
     return MINTEMP;
+  }
+
+  this.powerSavingOn = function(){
+    this.switch = true
   }
 };
 
