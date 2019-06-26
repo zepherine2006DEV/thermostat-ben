@@ -31,17 +31,6 @@ describe("Thermostat", function() {
        thermostat.down();
      }
 
-    // thermostat.down()
-    // thermostat.down()
-    // thermostat.down()
-    // thermostat.down()
-    // thermostat.down()
-    // thermostat.down()
-    // thermostat.down()
-    // thermostat.down()
-    // thermostat.down()
-    // thermostat.down()
-
     expect(thermostat.down()).toEqual(10);
   })
 });
