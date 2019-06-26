@@ -10,6 +10,10 @@ function Thermostat() {
     return this.temp
   };
 
+  this.down = function() {
+    this.temp --
+    return this.temp
+  }
 };
 
 //Thermostat.prototype.defaultTemperature = function() {
