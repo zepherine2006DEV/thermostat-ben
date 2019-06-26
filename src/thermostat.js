@@ -1,9 +1,13 @@
 function Thermostat() {
+
+  const DEFAULTTEMP = 20;
+  const MINTEMP = 10;
+
   this.defaultTemperature = function() {
-      return 20;
+      return DEFAULTTEMP;
   };
 
-  this.temp = 20
+  this.temp = DEFAULTTEMP
 
   this.up = function(){
     this.temp ++
@@ -11,8 +15,15 @@ function Thermostat() {
   };
 
   this.down = function() {
-    this.temp --
-    return this.temp
+
+    if (this.temp > MINTEMP) {
+      this.temp --;
+    }
+      return this.temp;
+  }
+
+  this.minTemp = function() {
+    return MINTEMP;
   }
 };
 
