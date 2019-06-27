@@ -13,7 +13,7 @@ function Thermostat() {
   this.up = function(){
   // if temp > 25  and power switch is on then we can't have it higher
     if (this.temp < MAXTEMPONPOWERSAVING) {
-
+debugger;
       this.temp ++;
     }
     return this.temp
@@ -22,6 +22,7 @@ function Thermostat() {
   this.down = function() {
 
     if (this.temp > MINTEMP) {
+      debugger;
       this.temp --;
     }
       return this.temp;
